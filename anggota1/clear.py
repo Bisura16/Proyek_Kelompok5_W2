@@ -1,7 +1,7 @@
 # clear.py
 # Modul fitur Clear (C) dan All Clear (AC)
 
-import memory
+from . import memory
 
 last_result = 0
 
