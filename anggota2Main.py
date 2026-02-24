@@ -33,7 +33,7 @@ def main():
             print("Keluar dari program. Terima kasih!")
             break
 
-        # Menangani fitur Reset dan Memori
+        # fitur Reset dan Memori
         if pilihan == '8':
             clear.all_clear()
             print("[Info] Kalkulator telah di-reset (AC).")
@@ -74,14 +74,14 @@ def main():
                     hasil = bagi(angka1, angka2)
                     print(f"\n[Hasil] {angka1} / {angka2} = {hasil}")
                 elif pilihan == '6':
-                    hasil = persen(angka1, angka2) # Asumsi: angka1 adalah nilai, angka2 adalah total
+                    hasil = persen(angka1, angka2) 
                     print(f"\n[Hasil] {angka1} adalah {hasil}% dari {angka2}")
 
-                # Simpan hasil terakhir ke modul clear
+                
                 clear.set_last_result(hasil)
 
         except ValueError as e:
-            # Menangkap error bawaan Python (salah ketik huruf) DAN error buatan (bagi nol)
+            # error memasukan huruf
             if "could not convert string to float" in str(e):
                 print("\n[Error] Harap masukkan angka yang valid, bukan huruf!")
             else:
